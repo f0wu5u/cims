@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:cardCornerRadius="@dimen/cardview_default_radius"
+    app:cardElevation="@dimen/cardview_default_elevation"
+    app:contentPadding="@dimen/material_container_padding"
+    tools:showIn="@layout/content_home">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/row">
+
+            <LinearLayout
+                style="@style/column"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/profile_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/ic_profile"/>
+
+                <TextView
+                    style="@style/icon_caption"
+                    android:text="@string/profile" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/column"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/message_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/ic_message" />
+
+                <TextView
+                    style="@style/icon_caption"
+                    android:text="@string/message" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/column"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/account_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/ic_account" />
+
+                <TextView
+                    style="@style/icon_caption"
+                    android:text="@string/account" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/column"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/setting_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/ic_setting" />
+
+                <TextView
+                    style="@style/icon_caption"
+                    android:text="@string/settings" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v7.widget.CardView>

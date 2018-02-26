@@ -1,0 +1,33 @@
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/material_container_padding"
+    android:paddingRight="@dimen/material_container_padding"
+    android:paddingLeft="@dimen/material_container_padding"
+    tools:context="com.coltek.cims.ui.profile.EditProfileFragment">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        style="@style/Base.TextAppearance.AppCompat.Title"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/material_container_padding"
+        app:errorEnabled="true"
+        app:hintEnabled="false"
+        app:errorTextAppearance="@style/Theme.Design">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/email_text"
+            style="@style/AppTheme.Input"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>
+

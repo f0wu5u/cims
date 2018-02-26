@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item android:title="@string/registration">
+        <menu>
+            <item
+                android:id="@+id/nav_school"
+                android:icon="@mipmap/ic_building"
+                android:title="School"
+                />
+            <item
+                android:id="@+id/nav_mentor"
+                android:icon="@mipmap/ic_person"
+                android:title="Mentor" />
+        </menu>
+    </item>
+    <item android:title="Notifications">
+        <menu>
+            <item
+                android:id="@+id/nav_msg"
+                android:icon="@mipmap/ic_menu_message"
+                android:title="Messages"
+                />
+            <item
+                android:id="@+id/nav_news"
+                android:icon="@mipmap/ic_news_feed"
+                android:title="@string/news" />
+        </menu>
+    </item>
+    <group android:checkableBehavior="single"
+            android:menuCategory="secondary" >
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@mipmap/ic_info"
+            android:title="About" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@mipmap/ic_menu_manage"
+            android:title="@string/settings" />
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@mipmap/ic_report"
+            android:title="Report issues" />
+    </group>
+
+
+
+</menu>
