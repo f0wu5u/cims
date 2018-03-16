@@ -8,8 +8,6 @@ import com.coltek.cims.entity.School;
 
 import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
-import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.QueryName;
@@ -29,9 +27,9 @@ public interface ApplicationService {
         @PUT("updateIntern")
         void updateContact(@Body String email);
 
-        @POST("register/Mentor")
+    @POST("registerMentor")
         LiveData<ApiResponse<String>> registerMentor(@Body Mentor mentor);
 
-        @POST("register/School")
+    @POST("registerSchool")
         LiveData<ApiResponse<String>> registerSchool(@Body School sch);
 }

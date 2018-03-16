@@ -30,7 +30,7 @@
         </activity>
         <activity
             android:name=".ui.dashboard.DashboardActivity"
-            android:label="@string/title_activity_home"
+            android:label="Coltek IMS"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.login.LoginActivity"
@@ -40,15 +40,23 @@
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ui.profile.ProfileActivity"
+            android:name=".ui.profile.ProfileFragment"
             android:alwaysRetainTaskState="true"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ui.registration.RegistrationActivity"
+            android:name=".ui.mentor_registration.MentorRegistration"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.school_registration.SchoolRegistration"
             android:label="@string/title_activity_register"
             android:theme="@style/AppTheme" />
         <activity android:name=".ui.resetpassword.ResetPasswordActivity" />
+        <activity android:name=".ui.message.MessageActivity" />
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>

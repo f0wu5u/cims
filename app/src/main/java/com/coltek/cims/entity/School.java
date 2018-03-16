@@ -8,7 +8,7 @@ import android.support.annotation.NonNull;
  * Created by BraDev on 11/9/2017.
  */
 @Entity
-public final class School {
+public class School {
 
     @PrimaryKey
     @NonNull
@@ -16,17 +16,17 @@ public final class School {
 
     @NonNull
     private String name,
-
     region,
     district,
     town,number;
 
-    public School(@NonNull String region, String district, @NonNull String name, String town,String number) {
+    public School(@NonNull String region, String district, @NonNull String name, String town, String number, String index_number) {
         this.region = region;
         this.district = district;
         this.name = name;
         this.town = town;
         this.number = number;
+        this.index_number = index_number;
     }
 
     public String getIndex_number() {
@@ -41,16 +41,9 @@ public final class School {
         return region;
     }
 
-    public void setRegion(String region) {
-        this.region = region;
-    }
 
     public String getDistrict() {
         return district;
-    }
-
-    public void setDistrict(String district) {
-        this.district = district;
     }
 
     public String getName() {
@@ -63,10 +56,6 @@ public final class School {
 
     public String getTown() {
         return town;
-    }
-
-    public void setTown(String town) {
-        this.town = town;
     }
 
     @NonNull

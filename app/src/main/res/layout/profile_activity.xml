@@ -4,21 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.coltek.cims.ui.profile.ProfileActivity">
-
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorSecondary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
+    tools:context="com.coltek.cims.ui.profile.ProfileFragment">
 
     <include layout="@layout/content_profile" />
 
@@ -26,9 +12,9 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="end|bottom"
         android:layout_margin="@dimen/fab_margin"
-        app:backgroundTint="@color/colorSecondary"
+        app:backgroundTint="@color/colorSecondaryDark"
         app:srcCompat="@mipmap/ic_edit" />
 
 </android.support.design.widget.CoordinatorLayout>

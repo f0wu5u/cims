@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <android.support.v7.widget.CardView
         style="@style/CardView.Light"
         android:layout_width="match_parent"
@@ -19,15 +19,15 @@
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/school_details"
                 android:layout_marginBottom="24dp"
+                android:text="@string/school_details"
                 android:textColor="@color/colorPrimary"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="@dimen/material_content_padding">
+                android:layout_marginBottom="@dimen/material_content_padding"
+                android:orientation="vertical">
                 <TextView
                     style="@style/Base.TextAppearance.AppCompat.Subhead"
                     android:layout_width="wrap_content"
@@ -49,21 +49,21 @@
                     android:layout_height="match_parent">
                     <TextView
                         style="@style/Base.TextAppearance.AppCompat.Subhead"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintLeft_toLeftOf="parent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/school_region" />
+                        android:text="@string/school_region"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
                     <Spinner
                         android:id="@+id/sch_region"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintRight_toRightOf="parent"
                         style="@style/Widget.AppCompat.Spinner.DropDown"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="end"
                         android:entries="@array/region_list"
-                        android:spinnerMode="dialog"/>
+                        android:gravity="end"
+                        android:spinnerMode="dialog"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </android.support.constraint.ConstraintLayout>
 
             </LinearLayout>
@@ -71,8 +71,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="@dimen/material_container_padding">
+                android:layout_marginTop="@dimen/material_container_padding"
+                android:orientation="vertical">
                 <TextView
                     style="@style/Base.TextAppearance.AppCompat.Subhead"
                     android:layout_width="wrap_content"
@@ -87,8 +87,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="@dimen/material_container_padding">
+                android:layout_marginTop="@dimen/material_container_padding"
+                android:orientation="vertical">
                 <TextView
                     style="@style/Base.TextAppearance.AppCompat.Subhead"
                     android:layout_width="wrap_content"
@@ -103,15 +103,15 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+        style="@style/CardView.Light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/CardView.Light"
         android:layout_marginTop="@dimen/material_container_padding">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/material_container_padding">
+            android:layout_margin="@dimen/material_container_padding"
+            android:orientation="vertical">
             <TextView
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="wrap_content"
@@ -119,11 +119,11 @@
                 android:text="Additional Information"
                 android:textColor="@color/colorPrimary"/>
             <TextView
+                style="@style/TextAppearance.AppCompat.Caption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/TextAppearance.AppCompat.Caption"
-                android:text="Section is for additional student information"
-                android:layout_marginBottom="24dp"/>
+                android:layout_marginBottom="24dp"
+                android:text="Section is for additional student information" />
             <TextView
                 style="@style/Base.TextAppearance.AppCompat.Subhead"
                 android:layout_width="wrap_content"
@@ -132,9 +132,9 @@
             <EditText
                 android:id="@+id/std_number"
                 style="@style/AppTheme.Input"
+                android:hint="02XXXXXXXX / 05XXXXXXXX"
                 android:inputType="phone"
-                android:maxLength="10"
-                android:hint="02XXXXXXXX / 05XXXXXXXX"/>
+                android:maxLength="10" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
     <LinearLayout
@@ -143,13 +143,13 @@
         android:layout_margin="@dimen/material_container_padding"
         android:orientation="horizontal">
 
-        <ImageButton
+        <Button
             android:id="@+id/sch_done"
             style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_done"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="Done" />
 
         <Button
             android:id="@+id/to_mentor"
@@ -157,8 +157,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/material_content_padding"
+            android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:text="@string/to_mentor"
-            android:layout_weight="1"/>
+            android:text="@string/to_mentor" />
     </LinearLayout>
 </LinearLayout>

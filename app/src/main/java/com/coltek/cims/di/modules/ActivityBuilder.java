@@ -1,9 +1,10 @@
 package com.coltek.cims.di.modules;
 
+import com.coltek.cims.ui.dashboard.DashboardActivity;
 import com.coltek.cims.ui.login.LoginActivity;
-import com.coltek.cims.ui.profile.ProfileActivity;
-import com.coltek.cims.ui.registration.RegistrationActivity;
+import com.coltek.cims.ui.mentor_registration.MentorRegistration;
 import com.coltek.cims.ui.resetpassword.ResetPasswordActivity;
+import com.coltek.cims.ui.school_registration.SchoolRegistration;
 import com.coltek.cims.ui.splashscreen.Splashscreen;
 
 import dagger.Module;
@@ -23,10 +24,13 @@ public abstract class ActivityBuilder {
     @ContributesAndroidInjector
     abstract ResetPasswordActivity resetPasswordActivity();
 
-    @ContributesAndroidInjector
-    abstract ProfileActivity profileActivity();
+    @ContributesAndroidInjector(modules = DashboardFragmentsBuilder.class)
+    abstract DashboardActivity dashboardActivity();
 
-    @ContributesAndroidInjector(modules = RegistrationFragmentBuilder.class)
-    abstract RegistrationActivity registrationActivity();
+    @ContributesAndroidInjector
+    abstract MentorRegistration mentorRegistration();
+
+    @ContributesAndroidInjector
+    abstract SchoolRegistration schoolRegistration();
 
 }

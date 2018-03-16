@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/material_container_padding"
-    tools:showIn="@layout/content_profile"
-    tools:context=".ui.registration.RegistrationActivity">
+    tools:context=".ui.dashboard.DashboardActivity"
+    tools:showIn="@layout/content_profile">
 
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -15,25 +15,25 @@
         android:orientation="vertical">
 
         <android.support.v7.widget.AppCompatTextView
+            style="@style/Base.TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Base.TextAppearance.AppCompat.Title"
             android:text="Basic information" />
 
 
         <android.support.v7.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:paddingBottom="@dimen/material_container_padding"
-            android:paddingTop="@dimen/material_container_padding"
-            android:orientation="vertical">
+            android:paddingTop="@dimen/material_container_padding">
 
             <android.support.v7.widget.AppCompatTextView
                 style="@style/Base.TextAppearance.AppCompat.Subhead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
-                android:paddingBottom="4dp"/>
+                android:paddingBottom="4dp"
+                android:text="Name" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/name_holder"
@@ -43,16 +43,16 @@
         <android.support.v7.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:paddingBottom="@dimen/material_container_padding"
-            android:paddingTop="@dimen/material_container_padding"
-            android:orientation="vertical">
+            android:paddingTop="@dimen/material_container_padding">
 
             <android.support.v7.widget.AppCompatTextView
                 style="@style/Base.TextAppearance.AppCompat.Subhead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Student ID"
-                android:paddingBottom="4dp"/>
+                android:paddingBottom="4dp"
+                android:text="Student ID" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/id_holder"
@@ -63,16 +63,16 @@
         <android.support.v7.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:paddingBottom="@dimen/material_container_padding"
-            android:paddingTop="@dimen/material_container_padding"
-            android:orientation="vertical">
+            android:paddingTop="@dimen/material_container_padding">
 
             <android.support.v7.widget.AppCompatTextView
                 style="@style/Base.TextAppearance.AppCompat.Subhead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Department"
-                android:paddingBottom="4dp"/>
+                android:paddingBottom="4dp"
+                android:text="Department" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/department_holder"

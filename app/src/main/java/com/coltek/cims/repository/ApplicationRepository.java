@@ -142,7 +142,8 @@ public class ApplicationRepository {
 
 
     public LiveData<Resource<String>> registerMentor(Mentor mentor) {
-        mentor.setIndex_number(sharedPreferences.getString("id","0000000000"));
+        if (mentor.getIndex_number().equals("0"))
+            mentor.setIndex_number(sharedPreferences.getString("id", null));
         return new NetworkBoundResource<String, String>(executors) {
             @Override
             protected void saveCallResult(@NonNull String item) {
@@ -180,7 +181,8 @@ public class ApplicationRepository {
     }
 
     public LiveData<Resource<String>> registerSchool(School sch) {
-        sch.setIndex_number(sharedPreferences.getString("id",null));
+        if (sch.getIndex_number().equals("0"))
+            sch.setIndex_number(sharedPreferences.getString("id", null));
         return new NetworkBoundResource<String, String>(executors) {
             @Override
             protected void saveCallResult(@NonNull String item) {

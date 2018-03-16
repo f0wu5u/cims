@@ -13,10 +13,6 @@ import java.util.regex.Pattern;
 import retrofit2.Response;
 import timber.log.Timber;
 
-/**
- * Created by BraDev ${LOCALE} on 1/12/2018.
- */
-
 public class ApiResponse<T> {
     private static final Pattern LINK_PATTERN = Pattern
             .compile("<([^>]*)>[\\s]*;[\\s]*rel=\"([a-zA-Z0-9]+)\"");

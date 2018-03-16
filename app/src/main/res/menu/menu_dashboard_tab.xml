@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.coltek.cims.ui.dashboard.DashboardActivity">
+    <item
+        android:id="@+id/action_main"
+        android:icon="@drawable/ic_notice"
+        android:orderInCategory="10"
+        android:title="@string/notice"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_profile"
+        android:icon="@drawable/ic_profile"
+        android:orderInCategory="11"
+        android:title="@string/profile"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/action_account"
+        android:icon="@drawable/ic_account"
+        android:orderInCategory="12"
+        android:title="@string/account"
+        app:showAsAction="collapseActionView" />
+    <!--<item-->
+    <!--android:id="@+id/action_settings"-->
+    <!--android:orderInCategory="13"-->
+    <!--android:title="@string/action_settings"-->
+    <!--android:icon="@drawable/ic_settings"-->
+    <!--app:showAsAction="collapseActionView" />-->
+</menu>

@@ -15,20 +15,13 @@ import javax.inject.Inject;
 public class ProfileViewModel extends ViewModel {
 
     private final LiveData<Student> studentProfile;
-    private final ApplicationRepository applicationRepository;
     @Inject
     ProfileViewModel(ApplicationRepository applicationRepository) {
         studentProfile = applicationRepository.getProfile();
-        this.applicationRepository = applicationRepository;
     }
 
     LiveData<Student> getStudentProfile(){
         return studentProfile;
     }
-
-     void updateContact(String email){
-        this.applicationRepository.updateContact(email);
-    }
-
 
 }

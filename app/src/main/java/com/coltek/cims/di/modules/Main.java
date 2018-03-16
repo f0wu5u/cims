@@ -36,8 +36,7 @@ public class Main {
     @Provides
     @Singleton
     ApplicationService applicationService(OkHttpClient okHttpClient){
-        return new Retrofit.Builder()
-                .baseUrl("http://192.168.1.101/cims_api_v1/v1/")
+        return new Retrofit.Builder().baseUrl("http://192.168.173.1/cims_api_v1/v1/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(new LiveDataCallAdapterFactory())
                 .client(okHttpClient)
@@ -47,7 +46,7 @@ public class Main {
     @Provides
     @Singleton
     HttpLoggingInterceptor httpLoggingInterceptor() {
-        return new HttpLoggingInterceptor(message -> i(message)).setLevel(HttpLoggingInterceptor.Level.BASIC);
+        return new HttpLoggingInterceptor(message -> i(message)).setLevel(HttpLoggingInterceptor.Level.BODY);
     }
 
     @Provides
@@ -60,8 +59,7 @@ public class Main {
     @Singleton
     Headers headers(SharedPreferences preferences,CacheControl cacheControl){
         return new Headers.Builder()
-                .add("Cache-control",cacheControl.toString())
-                .set("Authorization",preferences.getString("token","CIMS-TOKEN-FREE"))
+                .add("Cache-control",cacheControl.toString()).set("Authorization", preferences.getString("token", "CIMS-TOKEN-FREE")).set("Content-Type", "application/json;charset=utf-8")
                 .build();
     }
     @Provides

@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "5b95ba4fba5f8143f8c46ed747b6b944",
+    "identityHash": "c5625bcd1d9b81b96ff8313011142865",
     "entities": [
       {
         "tableName": "Student",
@@ -100,7 +100,7 @@
       },
       {
         "tableName": "Mentor",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`index_number` TEXT NOT NULL, `full_name` TEXT, `qualification` TEXT, `status` TEXT, `phone` TEXT, `bank_name` TEXT, `bank_branch` TEXT, `bank_acc_number` TEXT, PRIMARY KEY(`index_number`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`index_number` TEXT NOT NULL, `full_name` TEXT, `qualification` TEXT, `status` TEXT, `address` TEXT, `phone` TEXT, `bank_name` TEXT, `bank_branch` TEXT, `bank_acc_number` TEXT, PRIMARY KEY(`index_number`))",
         "fields": [
           {
             "fieldPath": "index_number",
@@ -123,6 +123,12 @@
           {
             "fieldPath": "status",
             "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "address",
             "affinity": "TEXT",
             "notNull": false
           },
@@ -163,7 +169,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"5b95ba4fba5f8143f8c46ed747b6b944\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"c5625bcd1d9b81b96ff8313011142865\")"
     ]
   }
 }

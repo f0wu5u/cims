@@ -16,12 +16,7 @@ public final class Validation {
     }
     public static boolean isValidNumber(String number) {
 
-        return (number.startsWith("020") ||
-                number.startsWith("023") ||
-                number.startsWith("024") ||
-                number.startsWith("026") ||
-                number.startsWith("027") ||
-                number.startsWith("05")) && isValidIndex(number);
+        return (number.startsWith("02") || number.startsWith("05")) && isValidIndex(number);
     }
     public static boolean isValidPassword(String password) {
         return !isEmpty(password);

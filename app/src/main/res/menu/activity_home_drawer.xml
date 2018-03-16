@@ -6,41 +6,29 @@
         <menu>
             <item
                 android:id="@+id/nav_school"
-                android:icon="@mipmap/ic_building"
+                android:icon="@drawable/ic_school"
                 android:title="School"
                 />
             <item
                 android:id="@+id/nav_mentor"
-                android:icon="@mipmap/ic_person"
+                android:icon="@drawable/ic_profile"
                 android:title="Mentor" />
         </menu>
     </item>
-    <item android:title="Notifications">
-        <menu>
-            <item
-                android:id="@+id/nav_msg"
-                android:icon="@mipmap/ic_menu_message"
-                android:title="Messages"
-                />
-            <item
-                android:id="@+id/nav_news"
-                android:icon="@mipmap/ic_news_feed"
-                android:title="@string/news" />
-        </menu>
-    </item>
+
     <group android:checkableBehavior="single"
             android:menuCategory="secondary" >
         <item
             android:id="@+id/nav_info"
-            android:icon="@mipmap/ic_info"
+            android:icon="@drawable/ic_about"
             android:title="About" />
         <item
             android:id="@+id/nav_settings"
-            android:icon="@mipmap/ic_menu_manage"
+            android:icon="@drawable/ic_settings"
             android:title="@string/settings" />
         <item
             android:id="@+id/nav_report"
-            android:icon="@mipmap/ic_report"
+            android:icon="@drawable/ic_error"
             android:title="Report issues" />
     </group>
 
